@@ -34,11 +34,10 @@ class ViewController: UIViewController {
         for num in stride(from: 0, to: 200, by: 10) {
             labels.append("$\(num)")
         }
-        labels.append("No limit")
     }
     
     private func setupDoubleSlider() {
-        let height: CGFloat = 38.0 //TODO: make this the default height
+        let height: CGFloat = 43.0 //TODO: make this the default height
         let width = view.bounds.width - 38.0 
         
         let frame = CGRect(
@@ -60,6 +59,9 @@ class ViewController: UIViewController {
         
         doubleSlider.lowerValueStepIndex = 0
         doubleSlider.upperValueStepIndex = labels.count - 1
+        
+        doubleSlider.thumbWidth = 26
+        doubleSlider.thumbTintColor = .red
         
         // You can use traditional notifications
         doubleSlider.addTarget(self, action: #selector(printVal(_:)), for: .valueChanged)

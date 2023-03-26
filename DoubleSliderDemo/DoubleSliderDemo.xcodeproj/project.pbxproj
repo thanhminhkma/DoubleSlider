@@ -13,6 +13,7 @@
 		03763D802072443D000AFB80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03763D7E2072443D000AFB80 /* LaunchScreen.storyboard */; };
 		03763D8820724463000AFB80 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03763D8720724463000AFB80 /* Extensions.swift */; };
 		03763D8C2072448A000AFB80 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03763D8B2072448A000AFB80 /* Main.storyboard */; };
+		D4280C26059AD656D3BFF704 /* Pods_DoubleSliderDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 966E1D2FE53C307275723CF2 /* Pods_DoubleSliderDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,6 +38,9 @@
 		03763D812072443D000AFB80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03763D8720724463000AFB80 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		03763D8B2072448A000AFB80 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		5ED2CAA7D217A6937008FE07 /* Pods-DoubleSliderDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoubleSliderDemo.release.xcconfig"; path = "Target Support Files/Pods-DoubleSliderDemo/Pods-DoubleSliderDemo.release.xcconfig"; sourceTree = "<group>"; };
+		966E1D2FE53C307275723CF2 /* Pods_DoubleSliderDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DoubleSliderDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B45823A0AC43F97DE7EB2786 /* Pods-DoubleSliderDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoubleSliderDemo.debug.xcconfig"; path = "Target Support Files/Pods-DoubleSliderDemo/Pods-DoubleSliderDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4280C26059AD656D3BFF704 /* Pods_DoubleSliderDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +60,8 @@
 			children = (
 				03763D742072443D000AFB80 /* DoubleSliderDemo */,
 				03763D732072443D000AFB80 /* Products */,
+				DBD6E796697B060147614194 /* Pods */,
+				33F9209A993E05CD3F67611B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,6 +87,24 @@
 			path = DoubleSliderDemo;
 			sourceTree = "<group>";
 		};
+		33F9209A993E05CD3F67611B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				966E1D2FE53C307275723CF2 /* Pods_DoubleSliderDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DBD6E796697B060147614194 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B45823A0AC43F97DE7EB2786 /* Pods-DoubleSliderDemo.debug.xcconfig */,
+				5ED2CAA7D217A6937008FE07 /* Pods-DoubleSliderDemo.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -87,11 +112,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 03763D842072443D000AFB80 /* Build configuration list for PBXNativeTarget "DoubleSliderDemo" */;
 			buildPhases = (
+				D32B56C7CD6FBCCE2847E242 /* [CP] Check Pods Manifest.lock */,
 				03763D6E2072443D000AFB80 /* Sources */,
 				03763D6F2072443D000AFB80 /* Frameworks */,
 				03763D702072443D000AFB80 /* Resources */,
 				03125729207244E700AA8ACB /* Embed Frameworks */,
 				0392EF0A2090412E00DEE1E3 /* ShellScript */,
+				EBF10340CEE31CA0AEAFD056 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -162,6 +189,46 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+		D32B56C7CD6FBCCE2847E242 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DoubleSliderDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EBF10340CEE31CA0AEAFD056 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DoubleSliderDemo/Pods-DoubleSliderDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/DoubleSlider/DoubleSlider.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DoubleSlider.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DoubleSliderDemo/Pods-DoubleSliderDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -305,6 +372,7 @@
 		};
 		03763D852072443D000AFB80 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B45823A0AC43F97DE7EB2786 /* Pods-DoubleSliderDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -321,6 +389,7 @@
 		};
 		03763D862072443D000AFB80 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5ED2CAA7D217A6937008FE07 /* Pods-DoubleSliderDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
