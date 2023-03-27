@@ -12,7 +12,7 @@ import UIKit
 
 extension DoubleSlider {
     
-    open func updateLayerFrames() {
+    public func updateLayerFrames() {
         CATransaction.begin()
         // Prevents interaction while updating
         CATransaction.setDisableActions(true)
@@ -25,10 +25,12 @@ extension DoubleSlider {
         let upperThumbCenter = positionForValue(value: upperValue)
         let upperThumbMinX = upperThumbCenter - thumbWidth / 2.0
         
-        lowerThumbLayer.frame = CGRect(x: lowerThumbMinX, y: 0.0, width: thumbWidth, height: thumbWidth)
+        let y = (bounds.height - thumbWidth) / 2
+        
+        lowerThumbLayer.frame = CGRect(x: lowerThumbMinX, y: y, width: thumbWidth, height: thumbWidth)
         lowerThumbLayer.setNeedsDisplay()
         
-        upperThumbLayer.frame = CGRect(x: upperThumbMinX, y: 0.0, width: thumbWidth, height: thumbWidth)
+        upperThumbLayer.frame = CGRect(x: upperThumbMinX, y: y, width: thumbWidth, height: thumbWidth)
         upperThumbLayer.setNeedsDisplay()
         
         trackLayer.frame = bounds.insetBy(dx: layerInset, dy: 18.0)
@@ -38,8 +40,8 @@ extension DoubleSlider {
         updateLabelSizes()
         updateLabelPositions()
         
-        minLabel.alignmentMode = .center
-        maxLabel.alignmentMode = .center
+        minLabel.alignmentMode = kCAAlignmentCenter
+        maxLabel.alignmentMode = kCAAlignmentCenter
 
         CATransaction.commit()
     }
@@ -76,7 +78,7 @@ extension DoubleSlider {
     }
     
     private func labelCenter(for label: DoubleSliderThumbLayer) -> CGPoint {
-        let labelY = trackLayer.frame.midY - (minLabel.frame.height / 2.0) - spaceBetweenThumbAndLabel
+        let labelY = trackLayer.frame.maxY + minLabel.frame.height + spaceBetweenThumbAndLabel
         return CGPoint(x: label.frame.midX, y: labelY)
     }
     

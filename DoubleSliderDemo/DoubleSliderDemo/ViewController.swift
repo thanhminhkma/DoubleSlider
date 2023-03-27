@@ -57,6 +57,8 @@ class ViewController: UIViewController {
         doubleSlider.lowerLabelMarginOffset = labelOffset
         doubleSlider.upperLabelMarginOffset = labelOffset
         
+        doubleSlider.spaceBetweenThumbAndLabel = 5
+        
         doubleSlider.lowerValueStepIndex = 0
         doubleSlider.upperValueStepIndex = labels.count - 1
         

@@ -183,9 +183,7 @@ import UIKit
     
     var previousLocation = CGPoint()
     
-    open var thumbWidth: CGFloat {
-        return CGFloat(bounds.height)
-    }
+    open var thumbWidth: CGFloat  = 26
     
     override open var frame: CGRect {
         didSet {
